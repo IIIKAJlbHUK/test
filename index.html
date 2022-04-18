@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div class="content">
@@ -44,6 +45,12 @@
     <script>
         var first__name = Telegram.first_name;
         console.log(first__name);
+
+        if (first__name == undefined) {
+            first__name = "Kirill";
+        }
+
+        jQuery('body').append(first__name);
     </script>
 </body>
 </html>
